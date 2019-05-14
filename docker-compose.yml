@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  python:
+    command: python clips_test.py
+    build:
+      dockerfile: ./compose/python/Dockerfile
+      context: .
+    volumes:
+      - ./:/app
