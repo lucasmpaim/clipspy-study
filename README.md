@@ -1,5 +1,5 @@
 
-# CLIPS
+# CLIPSPY
 
 Base repository to work with `clipspy` using docker-compose.
 
