@@ -20,19 +20,19 @@
 
 (defrule above_floor
  (elevator (current-floor ?other_floor))
- (button   (floor ?current_floor))
- (test (> ?other_floor ?current_floor))
+ (button   (floor ?button_floor))
+ (test (> ?other_floor ?button_floor))
  (elevator (direction down))
 =>
-  (assert (go down ?other_floor))
+  (assert (go down ?button_floor))
 )
 
 
 (defrule up_floor
  (elevator (current-floor ?other_floor))
- (button   (floor ?current_floor))
- (test (< ?other_floor ?current_floor))
+ (button   (floor ?button_floor))
+ (test (< ?other_floor ?button_floor))
  (elevator (direction up))
 =>
-  (assert (goto up ?other_floor))
+  (assert (goto up ?button_floor))
 )
